@@ -1,0 +1,359 @@
+/*GENERAL*/
+body{
+    font-family: "Helvetica";
+    margin:0;
+    padding:0;
+    color:#141d1a;
+    background-color: white;
+}
+body:not(.homepage){
+    background-color: #d7d0c0;
+}
+p, ul li{
+    font-size: 15px;
+    color: black;
+    hyphens: manual;
+}
+main{
+    min-height: 290px;
+    background-color: #ffffff;
+}
+header{
+    background-color: #60810a;
+    top:0;
+    position: fixed;
+    width:100%;
+    display: flex;
+    flex-basis: 100%;
+    margin:0;
+    padding:0;
+    z-index: 2;
+}
+#logo{
+    width: 400px;
+}
+nav{
+    width: 50%;
+    margin-left: auto;
+    margin-top: 7px;
+}
+nav ul{ 
+    display:flex;
+    list-style-type: none;
+    padding:0 10%;
+}
+nav ul li{
+    flex-grow: 1;
+    text-align: center;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    font-weight: 550;
+}
+nav ul li a{
+    display: block;
+    padding:10px;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    transition:background-color 0.7s, color 0.7s;
+    text-shadow: 0 2px 0 black;
+}
+nav ul li a:hover{
+    background-color: #749815;
+    color:#ffffff;
+}
+nav ul li .active{
+    background-color: #4c650a;
+    color:#ffffff;
+}
+.subtitle{
+    margin-top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-variant: small-caps;
+    color: black;
+    background-color: white;
+    width:50%;
+    padding: 3% 3% 0 3%;
+}
+.subtitle::first-letter{
+    font-weight: 50;
+}
+.container{
+    margin-top: 0;
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2% 3% 3% 3%;
+}
+
+/*HOMEPAGE*/
+.home{
+    position: relative; 
+    background-color: white;
+}
+.hero{
+    background-image: url("../img/river3.jpg");
+    background-size:cover;
+    background-position: center;
+    height:80vh;
+    width: 100%;
+    margin-bottom: 45px;
+}
+.intro{
+    position: absolute;
+    top:18%;
+    left:25%;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    z-index: 1;
+}
+.intro h3{
+    font-size: 25px;
+    margin-bottom: 0;
+}
+.intro p{
+    color: white;
+    padding-bottom: 20px;
+    font-size: 16px;
+}
+.intro img{
+    width: 400px;
+}
+.intro a{
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+.intro a:hover {
+  text-decoration: underline;
+}
+.intro2{
+    background-color: #ddd7ca;
+    width: 60%;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -110px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.intro2 div{
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.intro2 img{
+    width:35%;
+    margin-bottom: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.intro2 p{
+    margin-bottom: 30px;
+}
+.intro2 a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.intro2 a:hover {
+  text-decoration: underline;
+}
+
+/*SUSTAINABILITY AND STRATEGIES*/
+.info{
+    width:100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.info img{
+    width:100%;
+    margin-top: 50px;
+}
+.info div:nth-child(1) img{
+    margin-top: 0;
+}
+.info a{
+    text-decoration: none;
+    color: #109f10;
+}
+.info h3{
+    margin-bottom: 0;
+    margin-top: 2%;
+    letter-spacing: 1px;
+    font-weight:inherit;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
+.popup{
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 35%;
+    top: 10%;
+    position: relative;
+}
+.popup .close{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.sidebar{
+    width:90%;
+    background-color: #d3b9a3;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 35px 40px 20px;
+}
+.sidebar h3{
+    margin-left: 20px;
+}
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+.links a{
+    width:30%;
+    overflow-wrap:break-word;
+    color: #152a00;
+    text-align: center;
+    text-decoration: underline;
+    color: #107b10;
+    padding: 10px;
+    position: relative;
+}
+.links a:after{
+    display: inline-block;
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    top: 5px;
+    left: 88%;
+    content: "";
+    background: url("../img/icons-10.png") no-repeat 0 0;
+    background-size: 100%;
+}
+.links a:hover, .info a:hover{
+    text-decoration:underline;
+    color: #0faf0f;
+}
+
+/*FUTURE*/
+.future{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.future-page h3{
+    padding: 0;
+    margin-top:0px;
+}
+.future img, .future h3{
+    width: 100%;
+    position: relative;
+    padding: 5px;
+}
+#bad-future{
+    margin-right: 20px;
+    position: relative;
+}
+#good-future{
+    margin-left: 20px;
+    position: relative;
+}
+.click-icon{
+    max-width:30px;
+    position: absolute;
+    bottom:60px;
+    left:90%; 
+}
+.future h3{
+    position: absolute;
+    bottom:50px;
+    left: 10px;
+    color: white;
+}
+.future img:hover{
+    padding: 5px;
+    background-color: #a5d09b;
+}
+
+/*TERMS*/
+.name{
+    color: green;
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+.def{
+    margin-top: 5px;
+    padding: 0 0 20px 40px;
+}
+
+/*OTHER*/
+footer{
+    background-color: #848484;
+    padding:30px;
+    margin-top: 50px;
+}
+footer p{
+    color: white;
+    font-size: 12px;
+}
+@media screen and (max-width:1350px){
+    .links a{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (max-width:1000px){
+    header {flex-wrap: wrap;}
+    nav{
+        flex-basis: 100%;
+        background-color:#4a620b;
+    }
+    nav ul li a:hover{background-color: #60810a;}
+    nav ul li .active{background-color: #344508;}
+    .intro{top:20%;}
+    .intro2{margin-top: 0px;}
+    .subtitle{margin-top: 200px;}
+    .container, .subtitle {width:500px;}
+    .popup{
+        top: 20%;
+        width:350px;
+    }
+    .future{flex-wrap: wrap;}
+    #bad-future, #good-future{margin: 0;}
+}
